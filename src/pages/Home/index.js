@@ -1,5 +1,6 @@
 import React from 'react';
 import Apartments from '../../components/Apartment/Apartments';
+import GoogleMap from '../../components/GoogleMap';
 import FilterSidebar from '../../components/sidebar/FilterSidebar';
 
 const Home = () => {
@@ -22,7 +23,9 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className='w-1/2 bg-red-200'></div>
+          <div className='w-1/2'>
+            <GoogleMap />
+          </div>
         </div>
       </div>
     </div>
