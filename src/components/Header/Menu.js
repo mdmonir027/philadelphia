@@ -41,7 +41,7 @@ const Menu = () => {
               onChange={(e) => setValue2(e.target.value)}
             />
           </div>
-          <div className=' bg-rose-500 text-white py-3 px-3  flex justify-center items-center rounded-md cursor-pointer'>
+          <div className=' bg-primary text-white py-3 px-3  flex justify-center items-center rounded-md cursor-pointer'>
             <FaSearch />
           </div>
         </div>
