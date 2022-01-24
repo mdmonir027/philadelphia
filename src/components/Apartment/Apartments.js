@@ -1,5 +1,6 @@
 import React from 'react';
 import shortid from 'shortid';
+import ApartmentPagination from '../Pagination/ApartmentPagination';
 import CardItem from './CardItem';
 
 const apartments = [
@@ -102,7 +103,7 @@ const Apartments = () => {
           />
         ))}
       </div>
-      <h2>Pagination</h2>
+      <ApartmentPagination />
     </div>
   );
 };

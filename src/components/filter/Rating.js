@@ -47,6 +47,7 @@ const Rating = () => {
             className={`flex justify-between mb-2 ${
               item.checked ? '' : 'opacity-70'
             }`}
+            key={item.id}
           >
             <div className='flex gap-3 items-center'>
               <input
