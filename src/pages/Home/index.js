@@ -1,22 +1,28 @@
 import React from 'react';
+import Apartments from '../../components/Apartment/Apartments';
 import FilterSidebar from '../../components/sidebar/FilterSidebar';
 
 const Home = () => {
   return (
-    <div className='pt-8'>
+    <div className=''>
       <div className='custom-container'>
-        <h2 className='text-4xl font-medium text-primary-black'>
-          Aparments in Philadelphia
-        </h2>
-        <div className='md:flex gap-5 mt-8'>
-          <div className='w-1/4'>
-            <FilterSidebar />
-          </div>
-          <div>
-            <div className=''>
-              <h2>content</h2>
+        <div className='md:flex gap-3'>
+          <div className='w-1/2 pt-8'>
+            <h2 className='text-4xl font-medium text-primary-black'>
+              Aparments in Philadelphia
+            </h2>
+            <div className='md:flex gap-5 mt-8'>
+              <div className='w-1/3'>
+                <FilterSidebar />
+              </div>
+              <div className='w-2/3'>
+                <div className=''>
+                  <Apartments />
+                </div>
+              </div>
             </div>
           </div>
+          <div className='w-1/2 bg-red-200'></div>
         </div>
       </div>
     </div>
