@@ -5,3 +5,7 @@
 .custom-container {
   @apply container mx-auto px-10;
 }
+
+.font-sans-serif {
+  font-family: sans-serif;
+}
