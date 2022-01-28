@@ -4,7 +4,7 @@ const BottomFooter = () => {
   return (
     <div className=' bg-white py-4'>
       <div className='custom-container '>
-        <div className='flex justify-between'>
+        <div className='flex flex-col items-center md:flex-row gap-5 text-center justify-between'>
           <div className='flex gap-3'>
             <p className='text-gray-500 cursor-pointer'>2020 All Reserved</p>
             <a href='/'>Privacy Policy</a>

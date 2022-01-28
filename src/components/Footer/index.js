@@ -128,17 +128,17 @@ const Footer = () => {
     <>
       <div className='bg-[#f7f7f7] py-12'>
         <div className='custom-container'>
-          <div className='flex'>
-            <div className='w-1/4'>
+          <div className='sm:flex sm:flex-wrap '>
+            <div className='w-full sm:w-1/2 lg:w-1/4'>
               <FooterMenuSection title='About' items={menu1} />
             </div>
-            <div className='w-1/4'>
+            <div className='w-full sm:w-1/2 lg:w-1/4'>
               <FooterMenuSection title='Community' items={menu2} />
             </div>
-            <div className='w-1/4'>
+            <div className='w-full sm:w-1/2 lg:w-1/4'>
               <FooterMenuSection title='Become Host' items={menu3} />
             </div>
-            <div className='w-1/4'>
+            <div className='w-full sm:w-1/2 lg:w-1/4'>
               <FooterMenuSection title='Bookings support' items={menu4} />
             </div>
           </div>

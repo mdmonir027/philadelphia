@@ -5,7 +5,7 @@ import Card from './Card';
 const PopularArticle = () => {
   return (
     <div className='my-20'>
-      <div>
+      <div className='custom-container'>
         <Heading text={'Popular Help Articles'} />
         <div className='md:flex md:flex-wrap lg:flex-nowrap'>
           <Card />
