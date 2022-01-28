@@ -3,4 +3,5 @@ export const routes = {
   help: {
     center: '/help-center',
   },
+  searchingBooking: '/searching-and-booking',
 };
