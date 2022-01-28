@@ -11,7 +11,7 @@ const items = [
     title: 'Charming and comfortable house',
     utility: ['2 guests', '1 bedroom', '2 beds', '2 baths'],
     price: '$335',
-    period: '',
+    period: '8 nights',
   },
 ];
 

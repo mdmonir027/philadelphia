@@ -101,7 +101,7 @@ const allItems = [item1, item2, item3];
 
 const AllBoxes = () => {
   return (
-    <div className='flex md:gap-16'>
+    <div className='md:flex flex-wrap'>
       {allItems.map((item) => (
         <Box
           key={Math.random()}

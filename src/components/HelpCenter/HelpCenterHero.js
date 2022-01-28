@@ -21,11 +21,11 @@ const UpcomingHero = () => {
         <h2 className='text-4xl text-[#382f32] font-extrabold mb-3'>
           Search for a help article
         </h2>
-        <p className='w-1/2 mb-8 text-gray-600 font-medium'>
+        <p className='md:w-1/2 mb-8 text-gray-600 font-medium'>
           Businesses often become known today through effective marketing. The
           marketing may be in the form.
         </p>
-        <div className='w-2/3 bg-white rounded-md px-5 items-center py-3 flex'>
+        <div className='w-full md:w-2/3 bg-white rounded-md px-5 items-center py-3 flex'>
           <div className='flex-1'>
             <p className='text-gray-600 font-light'>Your Request</p>
             <div className='inputWrapper'>
@@ -34,7 +34,7 @@ const UpcomingHero = () => {
                 value={keyword}
                 onChange={(e) => setKeyword(e.target.value)}
                 placeholder='Search here'
-                className='w-full outline-none border-none placeholder:font-medium font-medium text-xl'
+                className='w-full outline-none border-none placeholder:font-medium font-medium text-base md:text-xl'
               />
             </div>
           </div>
