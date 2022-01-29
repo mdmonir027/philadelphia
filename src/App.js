@@ -2,9 +2,9 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import HelpCenter from './pages/HelpCenter';
+import HelpCenter from './pages/HelpCenter/HelpCenter';
+import SearchingBooking from './pages/HelpCenter/SearchingBooking';
 import Home from './pages/Home';
-import SearchingBooking from './pages/SearchingBooking';
 import { routes } from './routes';
 const App = () => {
   return (

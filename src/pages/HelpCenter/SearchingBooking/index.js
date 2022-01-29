@@ -1,12 +1,11 @@
 import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 import shortid from 'shortid';
-import ContactUs from '../../components/ContactUse';
-import PopularArticle from '../../components/PopularHelpArticle';
-import Breadcrumb from '../../components/SearchingBooking/Breadcrumb';
-import SearchItems from '../../components/SearchingBooking/SearchItems';
-import Heading from '../../components/SearchingBooking/shared/Heading';
-import Sidebar from '../../components/SearchingBooking/Sidebar';
+import ContactUs from '../../../components/HelpCenter/ContactUse';
+import PopularArticle from '../../../components/HelpCenter/PopularHelpArticle';
+import SearchItems from '../../../components/HelpCenter/SearchingBooking/SearchItems';
+import RightSidebar from '../../../components/HelpCenter/Shared/RightSidebar';
+import SectionBar from '../../../components/HelpCenter/Shared/SectionBar';
 
 const links = [
   {
@@ -91,11 +90,16 @@ const SearchingBooking = () => {
   return (
     <div className='mt-10'>
       <div className='custom-container'>
-        <Heading text='Searching and Booking' mb={2} />
-        <Breadcrumb links={links} />
+        <SectionBar text='Searching and Booking' mb={2} links={links} />
         <div className='md:flex border-b  mb-10'>
           <SearchItems />
-          <Sidebar title={'Search and Booking'} list={items} Icon={FaSearch} />
+          <div className='w-full md:w-1/4'>
+            <RightSidebar
+              title={'Search and Booking'}
+              list={items}
+              Icon={FaSearch}
+            />
+          </div>
         </div>
         <PopularArticle />
         <ContactUs />

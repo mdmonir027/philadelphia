@@ -1,6 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import Heading from '../shared/Heading';
+import Heading from '../../SearchingBooking/shared/Heading';
 
 const useStyles = createUseStyles({
   active: {
@@ -17,10 +17,10 @@ const useStyles = createUseStyles({
   },
 });
 
-const Sidebar = ({ Icon, title, list = [] }) => {
+const RightSidebar = ({ Icon, title, list = [] }) => {
   const classes = useStyles();
   return (
-    <div className='w-full md:w-1/4'>
+    <div className='w-full'>
       <div className={`border mb-2 py-5 rounded-lg  duration-500`}>
         <div className='px-3'>
           <div className='bg-gray-200 rounded-lg mb-5 w-14 h-14 flex justify-center items-center text-xl'>
@@ -45,4 +45,4 @@ const Sidebar = ({ Icon, title, list = [] }) => {
   );
 };
 
-export default Sidebar;
+export default RightSidebar;
