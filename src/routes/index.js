@@ -4,4 +4,7 @@ export const routes = {
     center: '/help-center',
   },
   searchingBooking: '/searching-and-booking',
+  profile: {
+    main: '/profile/',
+  },
 };

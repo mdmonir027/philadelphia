@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .custom-container {
-  @apply container mx-auto px-10;
+  @apply container mx-auto px-3 md:px-10;
 }
 
 .font-sans-serif {

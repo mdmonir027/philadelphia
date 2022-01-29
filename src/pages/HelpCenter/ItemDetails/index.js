@@ -17,7 +17,7 @@ const ItemDetails = () => {
         product. Joint ventures can be started with trustable people of the same
         trade. The only cost that will be incurred during the whole process is
         of printing fliers. For a better quality, professional can be hired to
-        design them, as they will be able to play with colors and write
+        design them, as they will be able to play with colors and write+
         motivating material. Booking places to stay Booking experiences Business
         travel and events Communicating with hosts Safety and accessibility
         Accounts Most of the businesses have latest news: 1. Fliers and business
