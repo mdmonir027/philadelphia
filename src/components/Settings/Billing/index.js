@@ -3,6 +3,7 @@ import { AiFillDollarCircle } from 'react-icons/ai';
 import Navigation from '../shared/Navigation';
 import RightSidebar from '../shared/RightSidebar';
 import Add from './Add';
+import Buttons from './Buttons';
 import Discount from './Discount';
 import PayMethods from './PayMethods';
 
@@ -11,7 +12,7 @@ const BillingContainer = () => {
     <div className='py-10'>
       <div className='custom-container'>
         <div className='sm:flex sm:justify-between'>
-          <div className='w-6/12 '>
+          <div className=' w-full md:w-6/12 '>
             <Navigation
               url={'/'}
               title={'Billing'}
@@ -20,8 +21,9 @@ const BillingContainer = () => {
             <PayMethods />
             <Add />
             <Discount />
+            <Buttons />
           </div>
-          <div className='w-4/12 mt-40'>
+          <div className='w-full md:w-4/12 mt-10 md:mt-40'>
             <RightSidebar
               Icon={AiFillDollarCircle}
               title='Payment Methods'
