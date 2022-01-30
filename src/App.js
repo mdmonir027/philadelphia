@@ -13,6 +13,7 @@ import GlobalPreference from './pages/Settings/GlobalPreference';
 import InfoSetting from './pages/Settings/Info';
 import LoginSetting from './pages/Settings/Login';
 import NotificationSetting from './pages/Settings/Notificaiton';
+import PrivacySetting from './pages/Settings/Privacy';
 import { routes } from './routes';
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
           path={routes.settings.notifications}
           element={<NotificationSetting />}
         />
+        <Route path={routes.settings.privacy} element={<PrivacySetting />} />
       </Routes>
       <Footer />
     </div>
