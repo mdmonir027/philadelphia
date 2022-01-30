@@ -14,5 +14,6 @@ export const routes = {
     globalPreference: '/settings/global-preference',
     info: '/settings/info',
     login: '/settings/login-details',
+    notifications: '/settings/notifications',
   },
 };

@@ -12,6 +12,7 @@ import BillingSettings from './pages/Settings/Billing';
 import GlobalPreference from './pages/Settings/GlobalPreference';
 import InfoSetting from './pages/Settings/Info';
 import LoginSetting from './pages/Settings/Login';
+import NotificationSetting from './pages/Settings/Notificaiton';
 import { routes } from './routes';
 const App = () => {
   return (
@@ -31,6 +32,10 @@ const App = () => {
         />
         <Route path={routes.settings.info} element={<InfoSetting />} />
         <Route path={routes.settings.login} element={<LoginSetting />} />
+        <Route
+          path={routes.settings.notifications}
+          element={<NotificationSetting />}
+        />
       </Routes>
       <Footer />
     </div>
