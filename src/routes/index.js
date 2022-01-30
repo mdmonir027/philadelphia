@@ -16,5 +16,6 @@ export const routes = {
     login: '/settings/login-details',
     notifications: '/settings/notifications',
     privacy: '/settings/privacy',
+    security: '/settings/security',
   },
 };

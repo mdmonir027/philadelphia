@@ -12,6 +12,7 @@ import {
 import { createUseStyles } from 'react-jss';
 import { Link } from 'react-router-dom';
 import shortid from 'shortid';
+import { routes } from '../../routes';
 const classNames = {
   wrapper:
     'w-full mb-2 shadow-md hover:shadow-lg cursor-pointer gap-3 items-center flex box-border px-4  py-3 rounded-md transition-colors duration-300',
@@ -26,56 +27,56 @@ const menuItems = [
     icon: FaUserCircle,
     name: 'Account information ',
     subTitle: 'Profile foto, name &amp; language',
-    url: '',
+    url: routes.settings.info,
   },
   {
     id: shortid(),
     icon: FaLaptop,
     name: 'Security ',
     subTitle: 'Your last activity and credentials',
-    url: '',
+    url: routes.settings.security,
   },
   {
     id: shortid(),
     icon: FaShieldAlt,
     name: 'Login details ',
     subTitle: 'Password & security questions',
-    url: '',
+    url: routes.settings.login,
   },
   {
     id: shortid(),
     icon: AiFillDollarCircle,
     name: 'Billing ',
     subTitle: 'Setup payment methods',
-    url: '',
+    url: routes.settings.billing,
   },
   {
     id: shortid(),
     icon: FaRegBell,
     name: 'Notifications ',
     subTitle: 'Set your email notifications',
-    url: '',
+    url: routes.settings.notifications,
   },
   {
     id: shortid(),
     icon: FaEye,
     name: 'Privacy',
     subTitle: 'Connected apps and services',
-    url: '',
+    url: routes.settings.privacy,
   },
   {
     id: shortid(),
     icon: FaUserCog,
     name: 'Global Preferences ',
     subTitle: 'Setup currency and language',
-    url: '',
+    url: routes.settings.globalPreference,
   },
   {
     id: shortid(),
     icon: FaCity,
     name: 'Become a host',
     subTitle: 'Switch your account type',
-    url: '',
+    url: routes.settings.main,
   },
 ];
 

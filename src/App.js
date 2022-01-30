@@ -14,6 +14,7 @@ import InfoSetting from './pages/Settings/Info';
 import LoginSetting from './pages/Settings/Login';
 import NotificationSetting from './pages/Settings/Notificaiton';
 import PrivacySetting from './pages/Settings/Privacy';
+import SecuritySetting from './pages/Settings/Security';
 import { routes } from './routes';
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
           element={<NotificationSetting />}
         />
         <Route path={routes.settings.privacy} element={<PrivacySetting />} />
+        <Route path={routes.settings.security} element={<SecuritySetting />} />
       </Routes>
       <Footer />
     </div>
