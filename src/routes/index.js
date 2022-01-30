@@ -6,5 +6,6 @@ export const routes = {
   searchingBooking: '/searching-and-booking',
   profile: {
     main: '/profile/',
+    info: '/profile/info',
   },
 };
