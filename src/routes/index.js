@@ -12,5 +12,6 @@ export const routes = {
     main: '/settings',
     billing: '/settings/billing',
     globalPreference: '/settings/global-preference',
+    info: '/settings/info',
   },
 };

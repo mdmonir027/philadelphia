@@ -10,6 +10,7 @@ import ProfileInfo from './pages/Profile/Info';
 import Settings from './pages/Settings';
 import BillingSettings from './pages/Settings/Billing';
 import GlobalPreference from './pages/Settings/GlobalPreference';
+import InfoSetting from './pages/Settings/Info';
 import { routes } from './routes';
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           path={routes.settings.globalPreference}
           element={<GlobalPreference />}
         />
+        <Route path={routes.settings.info} element={<InfoSetting />} />
       </Routes>
       <Footer />
     </div>
