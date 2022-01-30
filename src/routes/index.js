@@ -13,5 +13,6 @@ export const routes = {
     billing: '/settings/billing',
     globalPreference: '/settings/global-preference',
     info: '/settings/info',
+    login: '/settings/login-details',
   },
 };
