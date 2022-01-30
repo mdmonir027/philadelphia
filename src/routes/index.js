@@ -8,4 +8,7 @@ export const routes = {
     main: '/profile/',
     info: '/profile/info',
   },
+  settings: {
+    main: '/settings',
+  },
 };
