@@ -10,5 +10,6 @@ export const routes = {
   },
   settings: {
     main: '/settings',
+    billing: '/settings/billing',
   },
 };
