@@ -57,7 +57,7 @@ const apartments = [
   },
 ];
 
-const YourTripsContainer = () => {
+const UpcomingTripsContainer = () => {
   const [isTitle, setIsTitle] = useState(false);
   return (
     <div className='my-10'>
@@ -65,7 +65,7 @@ const YourTripsContainer = () => {
         <TripHeading
           isTitle={isTitle}
           setIsTitle={setIsTitle}
-          text='Your Trips'
+          text='Upcoming Trips'
         />
         <div className='mt-10 flex flex-wrap'>
           {apartments.map((item) => (
@@ -91,4 +91,4 @@ const YourTripsContainer = () => {
   );
 };
 
-export default YourTripsContainer;
+export default UpcomingTripsContainer;

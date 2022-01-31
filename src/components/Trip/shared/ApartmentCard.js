@@ -13,7 +13,7 @@ const ApartmentCard = ({
 }) => {
   if (isTitle) {
     return (
-      <div className='w-full flex mb-4 border rounded overflow-hidden'>
+      <div className='w-full flex mb-4 border rounded overflow-hidden hover:cursor-pointer'>
         <div className='h-52 w-4/12 overflow-hidden'>
           <img src={image} alt='' className='h-full w-full object-cover' />
         </div>
@@ -47,7 +47,7 @@ const ApartmentCard = ({
     );
   }
   return (
-    <div className='w-1/3'>
+    <div className='w-1/3 hover:cursor-pointer'>
       <div className='border rounded overflow-hidden mb-4 mx-2'>
         <div className='h-48 overflow-hidden'>
           <img src={image} alt='' className='h-full w-full object-cover' />
