@@ -8,14 +8,11 @@ export const routes = {
     main: '/profile/',
     info: '/profile/info',
   },
-  settings: {
-    main: '/settings',
-    billing: '/settings/billing',
-    globalPreference: '/settings/global-preference',
-    info: '/settings/info',
-    login: '/settings/login-details',
-    notifications: '/settings/notifications',
-    privacy: '/settings/privacy',
-    security: '/settings/security',
+  room: {
+    single: '/room/single',
+  },
+  book: {
+    upcoming: '/booking/upcoming',
+    trips: '/booking/your-trips',
   },
 };
