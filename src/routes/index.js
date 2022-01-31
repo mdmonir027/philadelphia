@@ -11,8 +11,8 @@ export const routes = {
   room: {
     single: '/room/single',
   },
-  book: {
-    upcoming: '/booking/upcoming',
-    trips: '/booking/your-trips',
+  trip: {
+    upcoming: '/trip/upcoming',
+    yours: '/trip/yours',
   },
 };

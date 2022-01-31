@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Profile from './pages/Profile/index';
 import ProfileInfo from './pages/Profile/Info';
 import SingleRoom from './pages/Room/Single';
+import YourTrips from './pages/Trips/YourTrips';
 import { routes } from './routes';
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path={routes.profile.main} element={<Profile />} />
         <Route path={routes.profile.info} element={<ProfileInfo />} />
         <Route path={routes.room.single} element={<SingleRoom />} />
+        <Route path={routes.trip.yours} element={<YourTrips />} />
       </Routes>
       <Footer />
     </div>
