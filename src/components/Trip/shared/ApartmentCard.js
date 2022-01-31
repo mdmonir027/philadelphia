@@ -47,7 +47,7 @@ const ApartmentCard = ({
     );
   }
   return (
-    <div className='w-1/3 hover:cursor-pointer'>
+    <div className='w-full md:w-1/2 lg:w-1/3 hover:cursor-pointer'>
       <div className='border rounded overflow-hidden mb-4 mx-2'>
         <div className='h-48 overflow-hidden'>
           <img src={image} alt='' className='h-full w-full object-cover' />

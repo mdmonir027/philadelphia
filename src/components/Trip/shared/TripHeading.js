@@ -3,7 +3,7 @@ import { FaListUl, FaTh } from 'react-icons/fa';
 
 const TripHeading = ({ setIsTitle, isTitle, text }) => {
   return (
-    <div className='flex justify-between items-center'>
+    <div className='flex flex-col md:flex-row gap-4 mg:gap-0 justify-between items-center text-center'>
       <h2 className='text-2xl font-bold text-primary-black'>{text}</h2>
       <div className='flex gap-x-4 items-center'>
         <ul className='flex gap-x-2 items-center'>
