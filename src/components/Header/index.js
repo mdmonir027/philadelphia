@@ -3,7 +3,7 @@ import Logo from './Logo';
 import Menu from './Menu';
 import Profile from './Profile';
 
-const Header = () => {
+const Header = ({ setOpen }) => {
   return (
     <div className='header py-4 shadow-md relative hidden md:block'>
       <div className='custom-container'>
@@ -12,7 +12,9 @@ const Header = () => {
             <Logo />
             <Menu />
           </div>
-          <Profile />
+          <div onClick={() => setOpen(true)}>
+            <Profile />
+          </div>
         </div>
       </div>
     </div>
