@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { FaArrowLeft, FaEnvelope, FaTimes, FaUser } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import { useInnerSize } from '../../../hook/useInnerSize';
 
-const RegisterTwo = ({ setType, handleClose, email }) => {
+const RegisterTwo = ({ handleClose, email }) => {
+  const { width } = useInnerSize();
+  const navigate = useNavigate();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   useEffect(() => {
     if (!email) {
-      setType('/register-1');
+      navigate('/auth/register-1');
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [email]);
+  }, [email, navigate]);
   const submitHandler = (e) => {
     e.preventDefault();
     console.log({ firstName, lastName, password, confirmPassword, email });
-    setType('register-success');
+    navigate('/auth/register-success');
   };
   return (
     <div>
@@ -23,13 +26,18 @@ const RegisterTwo = ({ setType, handleClose, email }) => {
         <div className='py-2  px-5 pb-6 border-b-2 relative text-black flex justify-between items-center'>
           <FaArrowLeft
             className='cursor-pointer'
-            onClick={() => setType('register-1')}
+            onClick={() => navigate('/auth/register-1')}
           />
           <h2 className='text-center text-3xl font-medium'>Sign Up</h2>
-          <FaTimes
-            className='text-2xl font-light text-primary-black  cursor-pointer'
-            onClick={handleClose}
-          />
+
+          {width > 768 ? (
+            <FaTimes
+              className='text-2xl font-light text-primary-black  cursor-pointer'
+              onClick={handleClose}
+            />
+          ) : (
+            <div />
+          )}
         </div>
         <div className='w-11/12 mx-auto  mt-8 '>
           <form className='mb-5' onSubmit={submitHandler}>
@@ -112,12 +120,15 @@ const RegisterTwo = ({ setType, handleClose, email }) => {
             </div>
             <div>
               <div className='flex items-center justify-between mt-3'>
-                <div className='flex gap-x-2 items-center text-gray-800 font-medium'>
-                  <input type='radio' name='' id='agreeCheck' />
-                  <label htmlFor='agreeCheck'>
-                    I agree with term {'$'} conditions
-                  </label>
-                </div>
+                <label className='inline-flex items-center'>
+                  <input
+                    type='checkbox'
+                    className='h-4 w-4 bg-gray-600  border-gray-300 focus:ring-3 focus:ring-red-300 rounded'
+                  />
+                  <span className='ml-2 text-gray-700'>
+                    I agree with term {'&'} conditions
+                  </span>
+                </label>
               </div>
               <div className='mt-5'>
                 <button

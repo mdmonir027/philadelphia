@@ -15,4 +15,5 @@ export const routes = {
     upcoming: '/trip/upcoming',
     yours: '/trip/yours',
   },
+  auth: '/auth/:type',
 };

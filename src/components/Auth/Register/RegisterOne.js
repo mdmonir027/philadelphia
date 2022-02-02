@@ -6,16 +6,15 @@ import {
   FaTimes,
   FaTwitter,
 } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
+import { useInnerSize } from '../../../hook/useInnerSize';
 
-const RegisterOne = ({
-  setType,
-  handleClose,
-  setSignUpmEmail,
-  signUpmEmail,
-}) => {
+const RegisterOne = ({ handleClose, setSignUpmEmail, signUpmEmail }) => {
+  const { width } = useInnerSize();
+  const navigate = useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
-    setType('register-2');
+    navigate('/auth/register-2');
   };
   return (
     <div>
@@ -23,10 +22,14 @@ const RegisterOne = ({
         <div className='py-2  px-5 pb-6 border-b-2 relative text-black flex justify-between items-center'>
           <div></div>
           <h2 className='text-center text-3xl font-medium'>Sign Up</h2>
-          <FaTimes
-            className='text-2xl font-light text-primary-black  cursor-pointer'
-            onClick={handleClose}
-          />
+          {width > 768 ? (
+            <FaTimes
+              className='text-2xl font-light text-primary-black  cursor-pointer'
+              onClick={handleClose}
+            />
+          ) : (
+            <div />
+          )}
         </div>
         <div className='w-11/12 mx-auto  mt-8 '>
           <form className='mb-5' onSubmit={submitHandler}>
@@ -47,11 +50,16 @@ const RegisterOne = ({
               </div>
             </div>
 
-            <div className='flex items-center justify-between mt-3'>
-              <div className='flex gap-x-2 items-center text-gray-800 font-medium'>
-                <input type='radio' name='' id='agreeCheck' />
-                <label htmlFor='agreeCheck'>
-                  I agree with term {'$'} conditions
+            <div className='flex items-center justify-between mt-4'>
+              <div className='flex gap-x-2 items-center text-black font-medium'>
+                <label className='inline-flex items-center'>
+                  <input
+                    type='checkbox'
+                    className='h-4 w-4 bg-gray-600  border-gray-300 focus:ring-3 focus:ring-red-300 rounded'
+                  />
+                  <span className='ml-2 text-gray-700'>
+                    I agree with term {'&'} conditions
+                  </span>
                 </label>
               </div>
             </div>
@@ -88,12 +96,9 @@ const RegisterOne = ({
       </div>
       <div className='flex justify-center gap-1 bg-gray-200 py-4 text-primary-black'>
         <p>You have a account? </p>
-        <span
-          className='font-medium cursor-pointer'
-          onClick={() => setType('login')}
-        >
+        <Link to='/auth/login' className='font-medium cursor-pointer'>
           Sign In
-        </span>
+        </Link>
       </div>
     </div>
   );

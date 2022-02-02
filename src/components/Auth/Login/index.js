@@ -7,8 +7,11 @@ import {
   FaTimesCircle,
   FaTwitter,
 } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { useInnerSize } from '../../../hook/useInnerSize';
 
-const Login = ({ setType, handleClose }) => {
+const Login = ({ handleClose }) => {
+  const { width } = useInnerSize();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const submitHandler = (e) => {
@@ -21,10 +24,14 @@ const Login = ({ setType, handleClose }) => {
         <div className='py-2  px-5 pb-6 border-b-2 relative text-black flex justify-between items-center'>
           <div></div>
           <h2 className='text-center text-3xl font-medium'>Sign In</h2>
-          <FaTimes
-            className='text-2xl font-light text-primary-black  cursor-pointer'
-            onClick={handleClose}
-          />
+          {width > 768 ? (
+            <FaTimes
+              className='text-2xl font-light text-primary-black  cursor-pointer'
+              onClick={handleClose}
+            />
+          ) : (
+            <div />
+          )}
         </div>
         <div className='w-11/12 mx-auto  mt-8 '>
           <form className='mb-5' onSubmit={submitHandler}>
@@ -61,17 +68,22 @@ const Login = ({ setType, handleClose }) => {
                 </div>
               </div>
             </div>
-            <div className='flex items-center justify-between mt-3'>
+            <div className='flex items-center justify-between mt-4'>
               <div className='flex gap-x-2 items-center text-black font-medium'>
-                <input type='radio' name='' id='' />
-                <p>Remember me</p>
+                <label className='inline-flex items-center'>
+                  <input
+                    type='checkbox'
+                    className='h-4 w-4 bg-gray-600  border-gray-300 focus:ring-3 focus:ring-red-300 rounded'
+                  />
+                  <span className='ml-2 text-gray-700'>Remember me</span>
+                </label>
               </div>
-              <p
-                onClick={() => setType('password-recover')}
+              <Link
+                to='/auth/password-recover'
                 className='text-red-500 cursor-pointer'
               >
                 Recover password
-              </p>
+              </Link>
             </div>
             <div className='mt-5'>
               <button
@@ -106,12 +118,9 @@ const Login = ({ setType, handleClose }) => {
       </div>
       <div className='flex justify-center gap-1 bg-gray-200 py-4 text-primary-black'>
         <p>You don't have a account? </p>
-        <span
-          className='font-medium cursor-pointer'
-          onClick={() => setType('register-1')}
-        >
+        <Link to='/auth/register-1' className='font-medium cursor-pointer'>
           Sign Up
-        </span>
+        </Link>
       </div>
     </div>
   );

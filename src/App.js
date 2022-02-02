@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -13,11 +13,10 @@ import Home from './pages/Home';
 // import YourTrips from './pages/Trips/YourTrips';
 import { routes } from './routes';
 const App = () => {
-  const [open, setOpen] = useState(false);
   return (
     <div>
-      <Header setOpen={setOpen} />
-      <Authentication open={open} setOpen={setOpen} />
+      <Header />
+
       <Routes>
         <Route path={routes.home} element={<Home />} />
         {/* <Route path={routes.help.center} element={<HelpCenter />} />
@@ -27,6 +26,7 @@ const App = () => {
         <Route path={routes.room.single} element={<SingleRoom />} />
         <Route path={routes.trip.yours} element={<YourTrips />} />
         <Route path={routes.trip.upcoming} element={<UpcomingTrips />} /> */}
+        <Route path={routes.auth} element={<Authentication />} />
       </Routes>
       <Footer />
     </div>
