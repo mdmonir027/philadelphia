@@ -40,7 +40,7 @@ const RegisterTwo = ({ handleClose, email }) => {
           )}
         </div>
         <div className='w-11/12 mx-auto  mt-8 '>
-          <form className='mb-5' onSubmit={submitHandler}>
+          <form className='mb-3' onSubmit={submitHandler}>
             <div className='pb-2 mb-2 border px-4 py-3 rounded'>
               <p className='font-normal text-xs text-gray-900 '>Email</p>
 

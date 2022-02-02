@@ -1,13 +1,8 @@
 import React from 'react';
-import {
-  FaEnvelope,
-  FaFacebookF,
-  FaGoogle,
-  FaTimes,
-  FaTwitter,
-} from 'react-icons/fa';
+import { FaEnvelope, FaTimes } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { useInnerSize } from '../../../hook/useInnerSize';
+import SignUpWithSocialMedia from '../shared/SignUpWithSocailMedia';
 
 const RegisterOne = ({ handleClose, setSignUpmEmail, signUpmEmail }) => {
   const { width } = useInnerSize();
@@ -73,24 +68,7 @@ const RegisterOne = ({ handleClose, setSignUpmEmail, signUpmEmail }) => {
             </div>
           </form>
           <div>
-            <p className='w-max my-5 mx-auto'>Or</p>
-            <div className=''>
-              <div className='border mb-2 px-4 py-3 text-gray-700 font-medium  rounded-2xl flex justify-between items-center cursor-pointer'>
-                <FaGoogle />
-                <p>Sign Up with Google</p>
-                <div></div>
-              </div>
-              <div className='border mb-2 px-4 py-3 text-gray-700 font-medium  rounded-2xl flex justify-between items-center cursor-pointer'>
-                <FaFacebookF />
-                <p>Sign Up with Facebook</p>
-                <div></div>
-              </div>
-              <div className='border mb-2 px-4 py-3 text-gray-700 font-medium  rounded-2xl flex justify-between items-center cursor-pointer'>
-                <FaTwitter />
-                <p>Sign Up with Twitter</p>
-                <div></div>
-              </div>
-            </div>
+            <SignUpWithSocialMedia />
           </div>
         </div>
       </div>

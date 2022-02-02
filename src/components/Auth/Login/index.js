@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
-import {
-  FaEnvelope,
-  FaFacebookF,
-  FaGoogle,
-  FaTimes,
-  FaTimesCircle,
-  FaTwitter,
-} from 'react-icons/fa';
+import { FaEnvelope, FaTimes, FaTimesCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useInnerSize } from '../../../hook/useInnerSize';
+import SignUpWithSocialMedia from '../shared/SignUpWithSocailMedia';
 
 const Login = ({ handleClose }) => {
   const { width } = useInnerSize();
@@ -34,7 +28,7 @@ const Login = ({ handleClose }) => {
           )}
         </div>
         <div className='w-11/12 mx-auto  mt-8 '>
-          <form className='mb-5' onSubmit={submitHandler}>
+          <form className='mb-3' onSubmit={submitHandler}>
             <div className='pb-2 mb-2 border px-4 py-3 rounded'>
               <p className='font-normal text-xs text-gray-900 '>Email</p>
 
@@ -95,24 +89,7 @@ const Login = ({ handleClose }) => {
             </div>
           </form>
           <div>
-            <p className='w-max my-5 mx-auto'>Or</p>
-            <div className=''>
-              <div className='border mb-2 px-4 py-3 text-gray-700 font-medium  rounded-2xl flex justify-between items-center cursor-pointer'>
-                <FaGoogle />
-                <p>Sign Up with Google</p>
-                <div></div>
-              </div>
-              <div className='border mb-2 px-4 py-3 text-gray-700 font-medium  rounded-2xl flex justify-between items-center cursor-pointer'>
-                <FaFacebookF />
-                <p>Sign Up with Facebook</p>
-                <div></div>
-              </div>
-              <div className='border mb-2 px-4 py-3 text-gray-700 font-medium  rounded-2xl flex justify-between items-center cursor-pointer'>
-                <FaTwitter />
-                <p>Sign Up with Twitter</p>
-                <div></div>
-              </div>
-            </div>
+            <SignUpWithSocialMedia />
           </div>
         </div>
       </div>
