@@ -15,5 +15,8 @@ export const routes = {
     upcoming: '/trip/upcoming',
     yours: '/trip/yours',
   },
+  booking: {
+    upcoming: '/booking/upcoming',
+  },
   auth: '/auth/:type',
 };
