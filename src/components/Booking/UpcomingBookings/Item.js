@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaCalendarAlt, FaEllipsisH } from 'react-icons/fa';
-import ItemInfoModal from '../ItemInfoModal';
+import ItemInfoModal from './ItemInfoModal';
 const options = {
   year: 'numeric',
   month: 'short',

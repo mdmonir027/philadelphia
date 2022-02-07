@@ -1,6 +1,7 @@
 import { Box, Modal } from '@mui/material';
 import React from 'react';
 import { FaTimes } from 'react-icons/fa';
+import { useInnerSize } from '../../../hook/useInnerSize';
 const style = {
   position: 'absolute',
   top: '50%',
@@ -31,18 +32,21 @@ const style2 = {
 };
 
 const ModalWrapper = ({ children, open, handleClose }) => {
-  return (
-    <>
-      <div className='hidden md:block'>
+  const { width } = useInnerSize();
+  if (width > 767) {
+    return (
+      <>
         <Modal open={open} onClose={handleClose}>
           <Box sx={style}>{children}</Box>
         </Modal>
-      </div>
-      <div className=' md:hidden'>
-        <Modal open={open} onClose={handleClose}>
-          <Box sx={style2}>{children}</Box>
-        </Modal>
-      </div>
+      </>
+    );
+  }
+  return (
+    <>
+      <Modal open={open} onClose={handleClose}>
+        <Box sx={style2}>{children}</Box>
+      </Modal>
     </>
   );
 };
