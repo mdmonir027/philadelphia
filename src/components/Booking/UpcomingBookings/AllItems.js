@@ -12,7 +12,7 @@ const dateFormate = (date) => {
 const AllItems = ({ items, title }) => {
   return (
     <div className='mb-6'>
-      <p className='mb-4'>{dateFormate(title)}</p>
+      <p className='mb-4 hidden md:block'>{dateFormate(title)}</p>
       <div>
         {items.map((item) => (
           <Item
