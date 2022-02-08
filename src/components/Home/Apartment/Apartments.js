@@ -1,6 +1,6 @@
 import React from 'react';
 import shortid from 'shortid';
-import ApartmentPagination from '../Pagination/ApartmentPagination';
+import ApartmentPagination from './ApartmentPagination';
 import CardItem from './CardItem';
 
 const apartments = [
