@@ -19,4 +19,5 @@ export const routes = {
     upcoming: '/booking/upcoming',
   },
   auth: '/auth/:type',
+  apartments: '/apartments',
 };
