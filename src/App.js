@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Apartments from './pages/Apartments';
 import Authentication from './pages/Auth';
 import UpcomingBookings from './pages/Booking/UpcomingBookings';
+import Explore from './pages/Explore';
 import HelpCenter from './pages/HelpCenter/HelpCenter';
 import SearchingBooking from './pages/HelpCenter/SearchingBooking';
 import Home from './pages/Home';
@@ -22,6 +23,7 @@ const App = () => {
 
       <Routes>
         <Route path={routes.home} element={<Home />} />
+        <Route path={routes.explore} element={<Explore />} />
         <Route path={routes.help.center} element={<HelpCenter />} />
         <Route path={routes.searchingBooking} element={<SearchingBooking />} />
         <Route path={routes.profile.main} element={<Profile />} />

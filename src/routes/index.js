@@ -1,5 +1,6 @@
 export const routes = {
   home: '/',
+  explore: '/explore',
   help: {
     center: '/help-center',
   },
