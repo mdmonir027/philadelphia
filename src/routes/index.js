@@ -17,5 +17,6 @@ export const routes = {
     notifications: '/settings/notifications',
     privacy: '/settings/privacy',
     security: '/settings/security',
+    business: '/settings/business',
   },
 };

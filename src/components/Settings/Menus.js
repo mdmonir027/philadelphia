@@ -74,9 +74,9 @@ const menuItems = [
   {
     id: shortid(),
     icon: FaCity,
-    name: 'Become a host',
+    name: 'Business Account',
     subTitle: 'Switch your account type',
-    url: routes.settings.main,
+    url: routes.settings.business,
   },
 ];
 

@@ -9,6 +9,7 @@ import Profile from './pages/Profile/index';
 import ProfileInfo from './pages/Profile/Info';
 import Settings from './pages/Settings';
 import BillingSettings from './pages/Settings/Billing';
+import BusinessAccount from './pages/Settings/BusinessAccount';
 import GlobalPreference from './pages/Settings/GlobalPreference';
 import InfoSetting from './pages/Settings/Info';
 import LoginSetting from './pages/Settings/Login';
@@ -40,6 +41,7 @@ const App = () => {
         />
         <Route path={routes.settings.privacy} element={<PrivacySetting />} />
         <Route path={routes.settings.security} element={<SecuritySetting />} />
+        <Route path={routes.settings.business} element={<BusinessAccount />} />
       </Routes>
       <Footer />
     </div>
