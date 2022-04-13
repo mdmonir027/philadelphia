@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { FaAngleRight } from 'react-icons/fa';
 
 const Pagination = ({ totalPage, nextPage, currentPage, setCurrentPage }) => {
@@ -8,9 +8,9 @@ const Pagination = ({ totalPage, nextPage, currentPage, setCurrentPage }) => {
         {Array.from(Array(totalPage)).map((_, index) => (
           <li
             key={index}
-            className={`py-2 px-4 rounded-md  hover:bg-primary hover:text-[#ffe4dc] hover:cursor-pointer ${
+            className={`py-2 px-4 rounded-md  hover:bg-green-500 hover:text-[#ffe4dc] hover:cursor-pointer ${
               currentPage === index + 1
-                ? 'bg-primary text-[#ffe4dc]'
+                ? 'bg-green-500 text-[#ffe4dc]'
                 : 'text-[#343434]'
             }`}
             onClick={() => setCurrentPage(index + 1)}
@@ -22,7 +22,7 @@ const Pagination = ({ totalPage, nextPage, currentPage, setCurrentPage }) => {
           className='flex items-center gap-1 border 
           px-2 py-2 rounded-md text-gray-600 cursor-pointer 
           border-gray-200 
-          hover:bg-primary  hover:text-[#ffe4dc] 
+          hover:bg-green-500  hover:text-[#ffe4dc] 
           disabled:bg-gray-300 disabled:text-gray-600'
           onClick={nextPage}
           disabled={currentPage === totalPage}
@@ -34,4 +34,4 @@ const Pagination = ({ totalPage, nextPage, currentPage, setCurrentPage }) => {
   );
 };
 
-export default Pagination;
+export default memo(Pagination);

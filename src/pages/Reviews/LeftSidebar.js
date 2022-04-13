@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { memo, useMemo } from 'react';
 import { FaStar } from 'react-icons/fa';
 
 const LeftSidebar = ({ reviews }) => {
@@ -80,4 +80,4 @@ const Item = ({ title, subTitle, percentage }) => {
   );
 };
 
-export default LeftSidebar;
+export default memo(LeftSidebar);

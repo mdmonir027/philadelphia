@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import AllReviewItems from './AllReviewItems';
 import { ALL_REVIEW_DATA } from './data';
 import EmptyReviews from './EmptyReviews';
 import LeftSidebar from './LeftSidebar';
 import Pagination from './Pagination';
-import Review from './Review';
 import TopMenu from './TopMenu';
 const AllReviews = () => {
   const [allReviews, setAllReviews] = useState([]);
@@ -69,19 +69,7 @@ const AllReviews = () => {
             <LeftSidebar reviews={allReviews} />
           </div>
           <div className='w-9/12'>
-            <div>
-              {reviews.map((item) => (
-                <Review
-                  key={item.id}
-                  title={item.title}
-                  feedback={item.feedback}
-                  username={item.username}
-                  user_avatar={item.user_avatar}
-                  rating={item.rating}
-                  createdAt={item.createdAt}
-                />
-              ))}
-            </div>
+            <AllReviewItems reviews={reviews} />
             <Pagination
               totalPage={totalPage}
               nextPage={nextPage}
