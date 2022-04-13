@@ -4,7 +4,7 @@ import { FaAngleRight } from 'react-icons/fa';
 const Pagination = ({ totalPage, nextPage, currentPage, setCurrentPage }) => {
   return (
     <div className='pb-10 pt-4 '>
-      <ul className='flex gap-3 ml-2 items-center flex-wrap'>
+      <ul className='flex gap-1 ml-2 items-center flex-wrap'>
         {Array.from(Array(totalPage)).map((_, index) => (
           <li
             key={index}

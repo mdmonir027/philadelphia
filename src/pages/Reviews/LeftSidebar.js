@@ -66,12 +66,12 @@ const Item = ({ title, subTitle, percentage }) => {
         <p className='text-sm text-primary-black'>{subTitle}</p>
       </div>
       <div className='text-right'>
-        <h4 className='text-lg mb-1 font-medium'>{percentage}%</h4>
+        <h4 className='text-lg mb-1 font-medium'>{percentage.toFixed(2)}%</h4>
         <div className='w-16'>
           <div class='w-full bg-green-500 rounded-full h-1 dark:bg-gray-700'>
             <div
               class='bg-gray-200 h-1 rounded-full'
-              style={{ width: 100 - percentage + '%' }}
+              style={{ width: 100 - percentage.toFixed(2) + '%' }}
             ></div>
           </div>
         </div>
