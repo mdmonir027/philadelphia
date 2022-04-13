@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { ALL_REVIEW_DATA } from './data';
 import EmptyReviews from './EmptyReviews';
+import LeftSidebar from './LeftSidebar';
 import Pagination from './Pagination';
 import Review from './Review';
+import TopMenu from './TopMenu';
 const AllReviews = () => {
   const [allReviews, setAllReviews] = useState([]);
   const [reviews, setReviews] = useState([]);
@@ -37,7 +39,11 @@ const AllReviews = () => {
   return (
     <div className='mt-10'>
       <div className='custom-container'>
+        <TopMenu />
         <div className='flex'>
+          <div className='w-3/12'>
+            <LeftSidebar reviews={allReviews} />
+          </div>
           <div className='w-9/12'>
             <div>
               {reviews.map((item) => (
@@ -58,9 +64,6 @@ const AllReviews = () => {
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
             />
-          </div>
-          <div className='w-3/12'>
-            <h2>titl</h2>
           </div>
         </div>
       </div>
