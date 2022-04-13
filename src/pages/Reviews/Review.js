@@ -47,5 +47,3 @@ const Review = (props) => {
 };
 
 export default Review;
-
-// https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg,https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg,https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg,https://images.pexels.com/photos/1024311/pexels-photo-1024311.jpeg,,https://images.pexels.com/photos/941693/pexels-photo-941693.jpeg,https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg,https://images.pexels.com/photos/372042/pexels-photo-372042.jpeg
