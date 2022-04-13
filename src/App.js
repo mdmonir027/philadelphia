@@ -11,6 +11,7 @@ import SearchingBooking from './pages/HelpCenter/SearchingBooking';
 import Home from './pages/Home';
 import Profile from './pages/Profile/index';
 import ProfileInfo from './pages/Profile/Info';
+import Reviews from './pages/Reviews';
 import SingleRoom from './pages/Room/Single';
 import UpcomingTrips from './pages/Trips/UpcomingTrips';
 import YourTrips from './pages/Trips/YourTrips';
@@ -34,6 +35,7 @@ const App = () => {
         <Route path={routes.auth} element={<Authentication />} />
         <Route path={routes.booking.upcoming} element={<UpcomingBookings />} />
         <Route path={routes.apartments} element={<Apartments />} />
+        <Route path={routes.reviews.root} element={<Reviews />} />
       </Routes>
       <Footer />
     </div>
