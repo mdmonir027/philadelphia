@@ -21,4 +21,7 @@ export const routes = {
   },
   auth: '/auth/:type',
   apartments: '/apartments',
+  reviews: {
+    root: '/reviews',
+  },
 };
